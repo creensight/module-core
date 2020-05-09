@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright © 2020 CreenSight. All rights reserved.
+ * @author CreenSight Development Team <magento@creensight.com>
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="creensight" translate="label" sortOrder="501" class="creensight-extensions">
+            <label>CreenSight Extensions</label>
+        </tab>
+        <section id="creensight" translate="label" type="text" sortOrder="9000" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Information</label>
+            <tab>creensight</tab>
+            <resource>CreenSight_Core::configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="menu" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable CreenSight Menu</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <backend_model>CreenSight\Core\Model\Config\Backend\Menu</backend_model>
+                    <comment>If yes, the CreenSight menu will be displayed on the admin navigation. All of the CreenSight module menu will be displayed there.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
